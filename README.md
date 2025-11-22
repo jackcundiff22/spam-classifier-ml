@@ -47,36 +47,40 @@ spam-classifier-ml/
 ├── venv/ # Virtual environment
 └── README.md # Project documentation
 
-## Installation & Setup
+# Installation & Setup
 
-### 1. Clone the repository
-```bash
+## 1. Clone the repository
+```
 git clone https://github.com/<your-username>/spam-classifier-ml.git
 cd spam-classifier-ml
-
-## 2. Create and activate virtual environment
+```
+##  2. Create and activate virtual environment
+```
 python -m venv venv
 .\venv\Scripts\Activate.ps1   # Windows PowerShell
-
+```
 ## 3. Install dependencies
+```
 pip install pandas scikit-learn joblib
-
-# Dataset
+```
+## Dataset
 
 This project uses the SMS Spam Collection Dataset (Kaggle), containing real labeled text messages.
 
-Column:	   Meaning:
-v1	       Label (spam or ham)
-v2	       Message text
+Column: v1, v2	  
+
+
+Meaning: Label (spam or ham),  Message text
+
 
 Replace or update spam.csv with any compatible dataset.
 
-# Train the Model
+## Train the Model
 
 Run:
-
+```
 python train_spam_classifier.py
-
+```
 
 This script:
 
@@ -90,26 +94,26 @@ Prints accuracy + metrics
 
 Saves pipeline to spam_pipeline.joblib
 
-# Predict Spam Messages (CLI)
+## Predict Spam Messages (CLI)
 
 After training:
-
+```
 python predict_spam.py
-
+```
 
 Example:
-
+```
 === Spam Classifier ===
 Type a message and press Enter.
 Type 'quit' or 'exit' to stop.
 
 Message: You won a free iPhone! Click here to claim.
 Prediction: spam
-
-# Example Model Performance
+```
+## Example Model Performance
 
 Typical accuracy (varies by dataset):
-
+```
 Accuracy: 0.9652
 
 Classification Report:
@@ -120,8 +124,8 @@ spam             0.93        0.92       0.92      XXXX
 Confusion Matrix:
 [[TN  FP]
  [FN  TP]]
-
-# Future Improvements
+```
+## Future Improvements 
 
 - Add spam probability scoring (predict_proba)
 
